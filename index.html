@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian O’Regan | Portfolio</title>
+    <style>
+        /* CSS STYLES */
+        :root { --primary: #004a99; --dark: #333; --light: #f4f4f4; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { line-height: 1.6; color: var(--dark); scroll-behavior: smooth; background: var(--white); }
+        .navbar { position: fixed; top: 0; width: 100%; background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; }
+        .nav-content { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 1rem 2rem; }
+        .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 0.9rem; }
+        .hero { height: 50vh; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--white); text-align: center; margin-top: 60px; padding: 2rem; }
+        .section { max-width: 800px; margin: 3rem auto; padding: 0 2rem; opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .section.visible { opacity: 1; transform: translateY(0); }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .job { margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid #ccc; }
+        .job h3 { margin-bottom: 0.2rem; }
+        .date { font-style: italic; color: #666; font-size: 0.85rem; display: block; margin-bottom: 0.5rem; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; margin-top: 1rem; }
+        .skill-item { background: var(--light); padding: 8px; border-radius: 4px; font-size: 0.8rem; text-align: center; border: 1px solid #ddd; }
+        footer { text-align: center; padding: 2rem; background: var(--light); font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <strong style="color: var(--primary)">AO</strong>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div>
+            <h1>Adrian O’Regan</h1>
+            <p>MBA (1.1) | QFA | Senior Financial Services Professional</p>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Limerick, Ireland</p>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <h2>Profile</h2>
+        [span_3](start_span)[span_4](start_span)[span_5](start_span)<p>Ambitious and detail-oriented professional with an MBA (1.1) and an Honours Degree (2.1), offering over seven years of experience across the Irish financial services sector[span_3](end_span)[span_4](end_span)[span_5](end_span). [span_6](start_span)Proven track record in pension administration, credit analysis, and regulatory compliance[span_6](end_span).</p>
+    </section>
+
+    <section id="experience" class="section">
+        <h2>Experience</h2>
+        <div class="job">
+            <h3>Associate | Willis Towers Watson (WTW)</h3>
+            [span_7](start_span)<span class="date">Nov 2024 – Present[span_7](end_span)</span>
+            [span_8](start_span)[span_9](start_span)<p>Managing end-to-end Pension Retirement Claims and exceeding SLAs for high-value member trades[span_8](end_span)[span_9](end_span).</p>
+        </div>
+        <div class="job">
+            <h3>Credit Analyst | KPMG</h3>
+            [span_10](start_span)<span class="date">Dec 2018 – Aug 2019[span_10](end_span)</span>
+            [span_11](start_span)[span_12](start_span)<p>Handled portfolio restructures ranging from €300,000 to €1.5 million while ensuring strict AML and KYC compliance[span_11](end_span)[span_12](end_span).</p>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <h2>Education</h2>
+        [span_13](start_span)<p><strong>Master of Business Administration (MBA)</strong> - 1.1 Grade, Dublin Business School[span_13](end_span)</p>
+        [span_14](start_span)<p><strong>HDip in Science in Computing</strong> - 1.1 Grade, ATU[span_14](end_span)</p>
+        [span_15](start_span)<p><strong>Qualified Financial Adviser (QFA)</strong>[span_15](end_span)</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            [span_16](start_span)<div class="skill-item">Regulatory Compliance[span_16](end_span)</div>
+            [span_17](start_span)<div class="skill-item">SLA & KPI Management[span_17](end_span)</div>
+            [span_18](start_span)<div class="skill-item">FinTech & CRM[span_18](end_span)</div>
+            [span_19](start_span)<div class="skill-item">Credit Analysis[span_19](end_span)</div>
+            [span_20](start_span)<div class="skill-item">Data Processing[span_20](end_span)</div>
+            [span_21](start_span)<div class="skill-item">AML & KYC[span_21](end_span)</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Adrian O’Regan | [span_22](start_span)Limerick, Ireland[span_22](end_span)</p>
+    </footer>
+
+    <script>
+        // Reveal sections on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => observer.observe(section));
+    </script>
+</body>
+</html
